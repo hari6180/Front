@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0,
+        maximum-scale=1.0, user-scalable=no">
+    <title>Javascript Test</title>
+
+    <!-- javascript start -->
+    <script type="text/javascript">
+        function set_term(days) {
+            var sDate = new Date();
+            sDate.setDate(sDate.getDate() - days);
+            var syy = sDate.getFullYear();
+            var smm = sDate.getMonth() + 1;
+            var sdd = sDate.getDate();
+
+            var e_date = syy + "-" + smm + "-" + sdd;
+
+            document.getElementById("e_date").innerHTML = e_date;
+
+
+
+            var date = new Date();
+            var yy = date.getFullYear();
+            var mm = date.getMonth() + 1;
+            var dd = date.getDate();
+
+            var s_date = yy + "-" + mm + "-" + dd;
+            document.getElementById("s_date").innerHTML = s_date;
+
+
+        }
+    </script>
+    <!-- javascript end -->
+</head>
+
+<body onload="set_term(1)">
+    <h1><span id="e_date"></span>~<span id="s_date"></span></h1>
+    <input type="button" onclick="set_term(1)" value="1일" />
+    <input type="button" onclick="set_term(7)" value="7일" />
+    <input type="button" onclick="set_term(16)" value="15일" />
+    <input type="button" onclick="set_term(30)" value="30일" />
+    <input type="button" onclick="set_term(60)" value="60일" />
+</body>
+
+</html>

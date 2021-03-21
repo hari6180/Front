@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0,
+        maximum-scale=1.0, user-scalable=no">
+    <title>Javascript Test</title>
+    <style>
+        .push_noti_on {
+            background-color: #ffff00;
+            color: red;
+        }
+
+        .push_noti_off {
+            background-color: #d5d5d5;
+            color: blue;
+        }
+    </style>
+    <!-- javascript start -->
+    <script type="text/javascript">
+        function set_push_noti() {
+            if (document.getElementById("push_btn").getAttribute("class") == "push_noti_off") {
+                document.getElementById("push_btn").className = 'push_noti_on';
+            } else {
+                document.getElementById("push_btn").className = 'push_noti_off';
+            }
+
+        }
+    </script>
+    <!-- javascript end -->
+</head>
+
+<body>
+    <button id="push_btn" class="push_noti_off" onclick="set_push_noti()">푸쉬알림 수신</button>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0,
+        maximum-scale=1.0, user-scalable=no">
+        <title>Javascript Test</title>
+
+        <!-- javascript start -->
+        <script type="text/javascript">
+        
+            var inven = [
+                [500, 291],
+                [320, 586],
+                [100, 460],
+                [120, 558],
+                [92, 18],
+                [30, 72]
+            ];
+
+            var money = 0;    
+
+            for (var i=0; i<inven.length; i++) {
+                for(var j=1; j<inven[i].length; j++) {
+                    money += inven[i][0] * 0.9 * inven[i][j];
+                }
+            }
+        
+
+            console.log("아이템 총 판매가격: " + money + "G" );
+
+        </script>
+        <!-- javascript end -->
+    </head>
+    <body>
+
+    </body>
+        
+</html>

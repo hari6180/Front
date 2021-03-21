@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0,
+        maximum-scale=1.0, user-scalable=no">
+        <title>Javascript Test</title>
+        <style>
+            #console {
+                margin: 10px 0;
+                padding: 10px;
+                border: 1px solid #d5d5d5;
+                background-color: #eee;
+                font-size: 20px;
+                font-weight: bold;
+            }
+        </style>
+        <!-- javascript start -->
+        <script type="text/javascript">
+            function star(x) {
+                
+                var result = "";
+                for(var i=0; i<x; i++) {
+                    for(var j=0; j<=i; j++) {
+                        result += "*";
+                    }
+                    result += "<br />"
+                    document.getElementById("console").innerHTML = result;
+                }
+                
+            }
+            
+        </script>
+        <!-- javascript end -->
+    </head>
+    <body>
+        <div>
+            <button onclick="star(5)">5줄</button>
+            <button onclick="star(10)">10줄</button>
+            <button onclick="star(15)">15줄</button>
+        </div>
+        <div id="console">
+        
+        </div>
+    </body>
+        
+</html>
